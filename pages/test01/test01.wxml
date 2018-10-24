@@ -1,0 +1,5 @@
+<view class="container log-list">
+  <view>{{ msg }}</view>
+  <button bindtap="clickMe">点击我</button>
+  <button bindtap="clickMe2">无效跳转</button>
+</view>

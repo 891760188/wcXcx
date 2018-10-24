@@ -7,7 +7,8 @@ Page({
     motto: 'Hello World22',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    count : 1
   },
   //事件处理函数
   bindViewTap: function() {
@@ -49,6 +50,17 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  add:function(){
+    console.log('调用add方法');
+    this.setData({
+      count: this.data.count + 1
+    })
+  },
+  goPageTest01:function(){
+    wx.navigateTo({
+      url: '../test01/test01'
     })
   }
 })
