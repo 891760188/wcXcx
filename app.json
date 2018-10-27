@@ -2,12 +2,30 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/test01/test01"
+    "pages/zujiantest/zujiantest",
+    "pages/test01/test01",
+    "pages/webviewtest/webviewtest",
+    "pages/camera/camera",
+    "pages/file/file",
+    "pages/wifi/wifi"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "黄国烨小程序demo",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ]
   }
 }

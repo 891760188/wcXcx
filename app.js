@@ -56,6 +56,23 @@ App({
    * 需要注意的是：只有当小程序进入后台一定时间，或者系统资源占用过高，才会被真正的销毁。
    */
   onShow: function (options){
+    
+    wx.setStorageSync('shareTickets', options.shareTickets)
+    wx.getShareInfo({
+      shareTicket: options.shareTickets,
+      timeout: 6000,
+      success: function (res) {
+        console.log('2' + JSON.stringify(res))
+       
+      },
+      fail(res) {
+       
+        console.log('3' + JSON.stringify(res))
+      },
+      complete() {
+
+      }
+    })
     console.log('onShow小程序启动，或者从后台进入前台显示' + JSON.stringify(options))
   },
   onHide: function (options){
@@ -73,6 +90,9 @@ App({
    */
   onPageNotFound: function (options){
     console.log('onPageNotFound业面找不到' + JSON.stringify(options))
+    wx.redirectTo({
+      url: 'pages/index/index'
+    }) // 如果是 tabbar 页面，请使用 wx.switchTab
   }
 
 })

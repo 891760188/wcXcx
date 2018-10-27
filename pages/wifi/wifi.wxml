@@ -1,0 +1,2 @@
+<!--pages/wifi/wifi.wxml-->
+<button bindtap='closeWifi'>wifi2</button>

@@ -16,6 +16,26 @@ Page({
       url: '../logs/logs'
     })
   },
+  turnwebview(){
+    wx.navigateTo({
+      url: '/pages/webviewtest/webviewtest'
+    })
+  },
+  turncamera(){
+    wx.navigateTo({
+      url: '/pages/camera/camera'
+    })
+  },
+  wifi(){
+    wx.navigateTo({
+      url: '/pages/wifi/wifi',
+    })
+  },
+  turnfile(){
+    wx.navigateTo({
+      url: '/pages/file/file'
+    })
+  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
@@ -60,7 +80,17 @@ Page({
   },
   goPageTest01:function(){
     wx.navigateTo({
-      url: '../test01/test01'
+      url: '../test01/test01?a=11'
     })
+  },
+  turnzujian(){
+    wx.navigateTo({
+      url: '../zujiantest/zujiantest?a=11'
+    })
+  },
+  onTabItemTap(option){
+    debugger
+    
+    console.log(JSON.stringify(option))
   }
 })

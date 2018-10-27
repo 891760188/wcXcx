@@ -5,9 +5,13 @@
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      <map  longitude="11" latitude="11"></map>
     </block>
   </view>
+  <button bindtap="turnzujian">组件</button>
+  <button bindtap="turnwebview">webview</button>
+   <button bindtap="turncamera">camera</button>
+    <button bindtap="turnfile">文件</button>
+    <button bindtap='wifi'>wifi</button>
   <view class="usermotto" bindtap="goPageTest01">
     <text class="user-motto">{{motto}}</text>
   </view>

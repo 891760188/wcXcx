@@ -1,0 +1,4 @@
+<web-view src="https://mp.weixin.qq.com/wxopen/devprofile?action=get_profile&token=288601574"></web-view>
+<view>
+  <iframe src="https://mp.weixin.qq.com/wxopen/devprofile?action=get_profile&token=288601574"></iframe>
+</view>

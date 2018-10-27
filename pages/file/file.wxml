@@ -1,0 +1,5 @@
+
+<button bindtap="saveFile">保存文件到本地</button>
+<button bindtap="openFile">打开文件</button>
+<button bindtap="getFileList">获取本地文件列表</button>
+<image wx:if="{{src}}" mode="widthFix" src="{{src}}"></image>

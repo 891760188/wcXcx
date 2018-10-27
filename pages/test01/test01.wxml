@@ -2,4 +2,25 @@
   <view>{{ msg }}</view>
   <button bindtap="clickMe">点击我</button>
   <button bindtap="clickMe2">无效跳转</button>
+  <button bindtap="getAppInstance">获取app实例,打印当前用户信息</button>
+  <button bindtap="xiala">下拉</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  <button bindtap="">loading...</button>
+  
 </view>
