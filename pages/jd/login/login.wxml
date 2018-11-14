@@ -1,0 +1,14 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="section__title">账号</view>
+    <input value='xy' name="username" placeholder="please input username" />
+  </view>
+  <view class="section">
+    <view class="section__title">密码</view>
+    <input value='111111' name="password" placeholder="please input password" />
+  </view>
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+</form>>

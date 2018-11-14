@@ -12,8 +12,13 @@
    <button bindtap="turncamera">camera</button>
     <button bindtap="turnfile">文件</button>
     <button bindtap='wifi'>wifi</button>
+    <button bindtap='getDataFromB'>b页面取数据</button>
+    <button bindtap='getMsg'>消息</button>
+    <button bindtap='jdapply'>基地请假系统</button>
+
   <view class="usermotto" bindtap="goPageTest01">
     <text class="user-motto">{{motto}}</text>
   </view>
   <view bindtap="add"> {{count}} </view>
+    <view > {{indexData}} </view>
 </view>

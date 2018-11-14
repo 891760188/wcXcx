@@ -16,6 +16,12 @@ Page({
       url: '../logs/logs'
     })
   },
+  //事件处理函数
+  getMsg: function () {
+    wx.navigateTo({
+      url: '/pages/msg/msg'
+    })
+  },
   turnwebview(){
     wx.navigateTo({
       url: '/pages/webviewtest/webviewtest'
@@ -37,6 +43,7 @@ Page({
     })
   },
   onLoad: function () {
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -88,9 +95,30 @@ Page({
       url: '../zujiantest/zujiantest?a=11'
     })
   },
+  getDataFromB() {
+
+    
+
+    wx.navigateTo({
+      url: '../bpage/bpage?a=11'
+    })
+  },
   onTabItemTap(option){
     debugger
     
     console.log(JSON.stringify(option))
-  }
+  },
+  alertDemo(option) {
+   
+    console.info('0.0');
+  },
+  /**
+   * 基地请假系统
+   */
+   jdapply() {
+
+    wx.navigateTo({
+      url: '../jd/login/login?a=11'
+    })
+  },
 })

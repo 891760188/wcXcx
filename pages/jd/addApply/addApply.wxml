@@ -1,0 +1,11 @@
+<text>新增请假</text>
+
+ <view class="section">
+  <textarea bindblur="bindTextAreaBlur" auto-height placeholder="请输入texterea内容" value="{{reason}}" />
+
+ </view> 
+  <view class="btn-area">
+    <button bindtap="formSubmit">提交</button>
+  </view>
+
+<view>{{reason}}</view>

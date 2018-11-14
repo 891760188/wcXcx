@@ -1,0 +1,2 @@
+<!--pages/bpage/bpage.wxml-->
+<button bindtap='backAWithData'>带数据回到a</button>

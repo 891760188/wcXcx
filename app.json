@@ -7,7 +7,13 @@
     "pages/webviewtest/webviewtest",
     "pages/camera/camera",
     "pages/file/file",
-    "pages/wifi/wifi"
+    "pages/wifi/wifi",
+    "pages/bpage/bpage",
+    "pages/msg/msg",
+    "pages/bpage/msg",
+    "pages/jd/login/login",
+    "pages/jd/myTask/myTask",
+    "pages/jd/addApply/addApply"
   ],
   "window": {
     "backgroundTextStyle": "light",

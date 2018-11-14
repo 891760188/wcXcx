@@ -1,0 +1,2 @@
+<view><text>{{access_token}}</text></view>
+<button bindtap="getAccessTokenM">getAccessToken</button>
