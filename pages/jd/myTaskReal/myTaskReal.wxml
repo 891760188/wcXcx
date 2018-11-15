@@ -1,0 +1,6 @@
+<!--pages/jd/myTaskReal/myTaskReal.wxml-->
+<scroll-view scroll-y="true">
+  <view wx:for="{{dataList}}" wx:for-item="item" wx:key="{{item.id}}" bindtap="intoDetail" data-item="{{item}}">
+    {{index+1}}: {{item.taskId}}: {{item.name}}
+  </view>
+</scroll-view>

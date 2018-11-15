@@ -12,14 +12,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getMyTask();
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.getMyTask();
   },
 
   /**
@@ -63,36 +63,30 @@ Page({
   onShareAppMessage: function () {
 
   },
-  goAddApply:() =>{
-    configPub.goPage('../addApply/addApply');
-  },
-  goTasks(){
-    configPub.goPage('../myTaskReal/myTaskReal');
-  },
-  getMyTask(){
-    var _this = this ;
+  getMyTask() {
+    var _this = this;
     let param = {};
-    param.url = configPub.addr + '/act/jdqj/list'
+    param.url = configPub.addr + '/act/jdqj/myTask'
     param.data = {
       offset: 0,
-      limit:10
+      limit: 10
     }
     param.method = 'GET'
     param.result = res => {
-     res.forEach(item => {
-       _this.data.dataList.push(item);
-     });
-     _this.setData({
-       dataList:_this.data.dataList
-     });
+
+      res.forEach(item => {
+        _this.data.dataList.push(item);
+      });
+      _this.setData({
+        dataList: _this.data.dataList
+      });
     }
     configPub.ajax(param);
   },
-  intoDetail(item){
-    let data = item.currentTarget.dataset.item ;
+  intoDetail(item) {
+    let data = item.currentTarget.dataset.item;
     data = JSON.stringify(data);
     data = encodeURIComponent(data);
-    configPub.goPage('../myTaskDetail/myTaskDetail?item='+data);
+    configPub.goPage('../complete/complete?item=' + data);
   }
-
 })

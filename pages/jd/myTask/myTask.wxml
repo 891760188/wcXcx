@@ -1,1 +1,7 @@
 <button type="primary"  bindtap="goAddApply"> 新增请假 </button>
+<button type="primary"  bindtap="goTasks"> 我的任务 </button>
+<scroll-view scroll-y="true">
+  <view wx:for="{{dataList}}" wx:for-item="item" wx:key="{{item.id}}" bindtap="intoDetail" data-item="{{item}}">
+    {{index+1}}: {{item.reason}}
+  </view>
+</scroll-view>

@@ -1,0 +1,7 @@
+<view>{{data.taskId}}</view>
+<view>{{data.name}}</view>
+<view> <textarea bindblur="bindTextAreaBlur" auto-height placeholder="请输入texterea内容" value="{{opinion}}" class='content' /></view>
+<view>
+  <button data-index="1" bindtap="completeWork">同意</button>
+  <button data-index="0" bindtap="completeWork">不同意</button>
+</view>

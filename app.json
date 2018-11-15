@@ -13,7 +13,10 @@
     "pages/bpage/msg",
     "pages/jd/login/login",
     "pages/jd/myTask/myTask",
-    "pages/jd/addApply/addApply"
+    "pages/jd/addApply/addApply",
+    "pages/jd/myTaskDetail/myTaskDetail",
+    "pages/jd/myTaskReal/myTaskReal",
+    "pages/jd/complete/complete"
   ],
   "window": {
     "backgroundTextStyle": "light",

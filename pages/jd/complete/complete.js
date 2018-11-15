@@ -5,14 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    dataList:[]
+    opinion:'ooooooo01'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getMyTask();
+    let data = options.item
+    data = decodeURIComponent(data);
+    data = JSON.parse(data);
+    this.setData({
+      data : data 
+    });
   },
 
   /**
@@ -63,36 +68,35 @@ Page({
   onShareAppMessage: function () {
 
   },
-  goAddApply:() =>{
-    configPub.goPage('../addApply/addApply');
-  },
-  goTasks(){
-    configPub.goPage('../myTaskReal/myTaskReal');
-  },
-  getMyTask(){
-    var _this = this ;
-    let param = {};
-    param.url = configPub.addr + '/act/jdqj/list'
-    param.data = {
-      offset: 0,
-      limit:10
+  completeWork:function(event){
+    debugger
+    if (!this.data.opinion){
+      wx.showToast({
+        title: 'empty',
+        // icon: 'loading',
+        duration: 5000
+      })
+      return ;
     }
-    param.method = 'GET'
+
+    var _this = this;
+    let param = {};
+    param.url = configPub.addr + '/act/jdqj/complete'
+    param.data = {
+      pass: event.currentTarget.dataset.index,
+      opinion: this.data.opinion,
+      taskId: this.data.data.taskId
+    }
+    param.method = 'post'
     param.result = res => {
-     res.forEach(item => {
-       _this.data.dataList.push(item);
-     });
-     _this.setData({
-       dataList:_this.data.dataList
-     });
+      wx.showToast({
+        title: 'sucess',
+        // icon: 'loading',
+        duration: 5000
+      })
+      
     }
     configPub.ajax(param);
-  },
-  intoDetail(item){
-    let data = item.currentTarget.dataset.item ;
-    data = JSON.stringify(data);
-    data = encodeURIComponent(data);
-    configPub.goPage('../myTaskDetail/myTaskDetail?item='+data);
   }
 
 })

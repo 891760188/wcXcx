@@ -5,14 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    dataList:[]
+    detailData:{
+      id:'loading..',
+      crdt: 'loading..',
+      reason: 'loading..'
+    },
+    aduitView:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getMyTask();
+    let detailObj = JSON.parse(decodeURIComponent(options.item)) ;
+    this.setData({
+      detailData: detailObj
+    });
+    this.getProgress();
   },
 
   /**
@@ -63,36 +72,19 @@ Page({
   onShareAppMessage: function () {
 
   },
-  goAddApply:() =>{
-    configPub.goPage('../addApply/addApply');
-  },
-  goTasks(){
-    configPub.goPage('../myTaskReal/myTaskReal');
-  },
-  getMyTask(){
-    var _this = this ;
+  getProgress(){
+    var _this = this;
     let param = {};
-    param.url = configPub.addr + '/act/jdqj/list'
-    param.data = {
-      offset: 0,
-      limit:10
-    }
+    param.url = configPub.addr + '/act/av/viewList'
     param.method = 'GET'
     param.result = res => {
-     res.forEach(item => {
-       _this.data.dataList.push(item);
-     });
-     _this.setData({
-       dataList:_this.data.dataList
-     });
+      res.forEach(item => {
+        _this.data.aduitView.push(item);
+      });
+      _this.setData({
+        aduitView: _this.data.aduitView
+      });
     }
     configPub.ajax(param);
-  },
-  intoDetail(item){
-    let data = item.currentTarget.dataset.item ;
-    data = JSON.stringify(data);
-    data = encodeURIComponent(data);
-    configPub.goPage('../myTaskDetail/myTaskDetail?item='+data);
   }
-
 })

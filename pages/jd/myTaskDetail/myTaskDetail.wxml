@@ -1,0 +1,64 @@
+
+<view class="container">
+  <view class="page-body">
+    <form>
+      <view class="page-section">
+        <view class="weui-cells weui-cells_after-title">
+
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">请假编号</view>
+            </view>
+            <view class="weui-cell__bd">
+              <view class="weui-input">
+                {{detailData.id}}
+              </view>
+            </view>
+          </view>
+
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label ">请假事由</view>
+            </view>
+            <view class="weui-cell__bd">
+              <view class="weui-input little">
+                {{detailData.reason}}
+              </view>
+            </view>
+          </view>
+
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label">请假时间</view>
+            </view>
+            <view class="weui-cell__bd">
+              <view class="weui-input little">
+                {{detailData.crdt}}
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </form>
+  </view>
+</view>
+
+<view class="container">
+    <view class="table">
+        <view class="tr">
+            <view class="th">审批人</view>
+            <view class="th">岗位</view>
+            <view class="th">结论</view>
+            <view class="th">审批意见</view>
+            <view class="th">时间</view>
+        </view>
+        <view class="tr" wx:for="{{5}}">
+            <view class="td">苏文秉</view>
+            <view class="td">部门经理</view>
+            <view class="td">同意</view>
+            <view class="td">给予同意哈</view>
+            <view class="td">2018-10-12</view>
+        </view>
+    </view>
+</view>
